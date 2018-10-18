@@ -12,13 +12,16 @@ html,body {
   position: relative;
   font-family: Courier New;
 	font-size: 10pt;
+  color: black;
 }
 a{
   text-decoration: none;
+  color: black;
 }
-.header {
-  color: white;
-  background-color: navy;
+
+.header{
+  color: navy;
+  background-color: lightblue;
   text-align: center;
   width: 100%;
   display: flex;
@@ -30,6 +33,15 @@ a{
   text-transform: uppercase;
   font-family: Courier New;
 }
+.header a {
+  color: navy;
+}
+#maincontent {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
 #map-container {
   width:100%;
   height:400px;
@@ -39,39 +51,28 @@ a{
   height:400px;
 }
 .filter-options {
-  color: white;
-  background-color: navy;
+  color: navy;
+  background-color: lightblue;
   text-align: center;
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0px;
   font-family: Courier New;
 }
 .filter-options h2 {
-  text-align: center;
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 #neighborhoods-select, #cuisines-select {
   text-align: center;
-  width: 60%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0px 0px 10px 0px;
   font-family: Courier New;
-  border-radius:2px;
-  -webkit-border-radius: 2px;
+  border-radius: 3.5px;
+  -webkit-border-radius: 3.5px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid #AAA;
@@ -81,17 +82,19 @@ a{
   outline-color: yellow;
   cursor: pointer;
 }
+option {
+  border-radius: 2px;
+}
 #restaurants-list {
   text-align: center;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0px;
   font-family: Courier New;
   list-style: none;
-  padding: 0px;
+  padding: 40px 0px 20px 0px;
 }
 #restaurants-list li{
   width:100%;
@@ -112,6 +115,9 @@ a{
   border: 2px solid lightblue;
   border-radius: 2px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .restaurant-wrap h1 {
   padding: 7px 0px 7px 0px;
@@ -119,6 +125,7 @@ a{
   font-family: Courier New;
 }
 .restaurant-wrap p {
+  width: 100%;
   padding: 0px;
   margin: 0px;
   font-family: Courier New;
@@ -147,4 +154,115 @@ button {
 button:hover {
   background-color: #9ac6f5;
   color: black;
+}
+#footer {
+  background-color: #9ac6f5;
+  align-items: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*Restaurant CSS*/
+
+#breadcrumb {
+  list-style: none;
+} 
+#breadcrumb li {
+  display: inline;
+}
+#breadcrumb li a {
+  color: #0275d8;
+}
+#restaurant-img {
+  border-radius: 2px;
+  margin: 15px 0 0 0;
+}
+#restaurant-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0px 20px 0px;
+}
+#restaurant-name {
+  padding: 15px 0 15px 0;
+  color: navy;
+  font-weight: bolder;
+}
+#restaurant-address {
+  padding: 10px 0 10px 0;
+}
+td, th, tr {
+  line-height: 1.5;
+}
+#restaurant-hours tr:nth-child(odd) {
+    background-color: #c5c2c2;
+}
+#restaurant-hours tr:hover {
+  background-color: lightblue;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0px 0px 20px 0px;
+}
+#reviews-container h2 {
+  border-width: 3px;
+  border-style: solid;
+  -webkit-border-image: 
+  -webkit-gradient(linear, 0 0, 0 100%, from(lightblue), to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image: 
+  -webkit-linear-gradient(lightblue, rgba(0, 0, 0, 0)) 1 100%;
+  -moz-border-image:
+  -moz-linear-gradient(lightblue, rgba(0, 0, 0, 0)) 1 100%;    
+  -o-border-image:
+  -o-linear-gradient(lightblue, rgba(0, 0, 0, 0)) 1 100%;
+  border-image:
+  linear-gradient(to top, lightblue, rgba(0, 0, 0, 0)) 1 100%;
+}
+#reviews-list {
+  list-style: none;
+  padding: 0px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.individual-review {
+  width: 100%;
+  text-align: left;
+  border: 2px solid lightblue;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  margin-bottom: 30px;
+}
+.reviewer-name {
+  font-weight: bolder;
+  background-image: linear-gradient(to right, rgba(89, 171, 255, 0.3), rgba(0,0,0,0));
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  padding: 5px;
+  margin: 14px 0px 0px 0px;
+}
+.reviewer-rating {
+  font-weight: bolder;
+  width: 83.09px;
+  background: rgba(233, 115, 247, 0.15);
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+  margin: 0px;
 }
