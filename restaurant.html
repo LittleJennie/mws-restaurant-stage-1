@@ -22,7 +22,7 @@
     </nav>
     <!-- Beginning breadcrumb -->
     <ul id="breadcrumb" >
-      <li><a href="/">Home </a><span> / <span></li>
+      <li><a href="/" tabindex="1">Home </a><span> / <span></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -31,27 +31,31 @@
   <hr>
   <!-- Beginning main -->
   <main id="maincontent">
-    <img id="restaurant-img">
-    <!-- Beginning map -->
-    <!-- End map -->
-    <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <div class="restaurant-wrap">
-        <section class="detail-map" id="map-container">
-          <div class="detail-map" id="map"></div>
-        </section>
-        <div class="restaurant-info">
-          <h1 id="restaurant-name"></h1>
-          <p id="restaurant-cuisine"></p>
-          <p id="restaurant-address"></p>
-          <table id="restaurant-hours"></table>
+    <div class="image-map-wrapper">
+      <img id="restaurant-img" tabindex="2">
+      <!-- Beginning map -->
+      <!-- End map -->
+      <!-- Beginning restaurant -->
+      <section id="restaurant-container">
+        <div class="restaurant-wrap">
+          <section class="detail-map" id="map-container">
+            <div class="detail-map" id="map"></div>
+          </section>
+          <div class="restaurant-info" tabindex="3">
+            <div class="info-wrap">
+              <h1 id="restaurant-name"></h1>
+              <p id="restaurant-cuisine"></p>
+              <p id="restaurant-address"></p>
+            </div>
+            <table id="restaurant-hours"></table>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+      <ul id="reviews-list" tabindex="4"></ul>
     </section>
     <!-- End reviews -->
   </main>

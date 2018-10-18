@@ -198,6 +198,7 @@ button:hover {
 }
 td, th, tr {
   line-height: 1.5;
+  padding: 0 0 0 5px;
 }
 #restaurant-hours tr:nth-child(odd) {
     background-color: #c5c2c2;
