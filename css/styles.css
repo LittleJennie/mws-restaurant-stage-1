@@ -119,7 +119,7 @@ option {
   flex-direction: column;
   justify-content: center;
 }
-.restaurant-wrap h1 {
+.restaurant-wrap h2 {
   padding: 7px 0px 7px 0px;
   margin: 0px;
   font-family: Courier New;
@@ -218,7 +218,7 @@ hr {
   width: 100%;
   padding: 0px 0px 20px 0px;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   border-width: 3px;
   border-style: solid;
   -webkit-border-image: 

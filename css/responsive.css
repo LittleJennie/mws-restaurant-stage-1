@@ -135,7 +135,7 @@
     #restaurants-list {
         flex-direction: column;
     }
-    .restaurant-wrap h1{
+    .restaurant-wrap h2{
         font-size: 13pt;
     }
     .restaurant-wrap p{
