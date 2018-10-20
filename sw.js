@@ -19,6 +19,7 @@ self.addEventListener('install', function(event) {
         'restaurant.html?id=9',
         'restaurant.html?id=10',
         'data/restaurants.json',
+        'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
         'js/main.js',
         'js/restaurant_info.js',
         'js/dbhelper.js',
